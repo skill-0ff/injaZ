@@ -39,7 +39,7 @@ Follow these steps to get the project running locally.
 ### 1. Clone the Repository
 ```bash
 git clone <repository-url>
-cd injaZ2.0
+cd injaZ
 ```
 
 ### 2. Install Backend Dependencies
@@ -56,28 +56,21 @@ cp .env.example .env
 ```
 *Note: The default configuration works for most local setups. Ensure `DB_PATH` points to your SQLite database if you customize it.*
 
-### 4. Initialize Database & Seed Admin
-We have provided a script to set up the initial database groups and a default admin user.
-```bash
-npm run seed
-```
-**Default Admin Credentials:**
-*   **Email**: `admin@injaz.com`
-*   **Password**: `password123`
-
-### 5. Start the Server
+### 4. Start the Server
 Start the backend server.
 ```bash
 npm start
 ```
-The server will start (default port: 3000) and serve the frontend files automatically.
+The server will automatically initialize the database and create a default admin user.
 
-### 6. Access the Application
+### 5. Access the Application
 Open your browser and navigate to:
 ```
 http://localhost:3000
 ```
-Login with the default admin credentials to start managing your teams!
+Login with the default admin credentials:
+*   **Email**: `teacher@test.com`
+*   **Password**: `password123`
 
 ## 📂 Project Structure
 

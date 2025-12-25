@@ -1,4 +1,5 @@
 const db = require('./db');
+const bcrypt = require('bcrypt');
 
 const initDb = () => {
     db.serialize(() => {
@@ -54,7 +55,25 @@ const initDb = () => {
             if (err) {
                 console.error("Error creating login table:", err.message);
             } else {
-                console.log("Database tables initialized (groups, users, tasks, login).");
+                console.log("Database tables initialized.");
+
+                // 5. Seed Default Admin
+                const checkSql = "SELECT id FROM users WHERE email = 'teacher@test.com'";
+                db.get(checkSql, (err, row) => {
+                    if (err) console.error(err.message);
+                    if (!row) {
+                        const password = 'password123';
+                        bcrypt.hash(password, 10, (err, hash) => {
+                            if (err) return console.error("Error hashing default password:", err);
+                            const insertSql = `INSERT INTO users (full_name, email, job, role, phone, password) 
+                                              VALUES ('Default User', 'teacher@test.com', 'SYS_ADMIN', 'TEACHER', '0500000000', ?)`;
+                            db.run(insertSql, [hash], (err) => {
+                                if (err) console.error("Error creating default admin:", err.message);
+                                else console.log("Default admin created: teacher@test.com");
+                            });
+                        });
+                    }
+                });
             }
         });
     });
