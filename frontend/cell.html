@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cell</title>
+    <link rel="stylesheet" href="/style.css">
+    <!-- Outfit Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="brand-logo">
+            <span class="brand-text">inja</span><span class="brand-accent">Z</span>
+        </div>
+
+        <!-- Center Navigation -->
+        <div class="nav-group">
+            <!-- Home -->
+            <button class="nav-btn active" data-section="home" aria-label="Home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+            </button>
+            <!-- Status (Activity/Pulse) -->
+            <button class="nav-btn" data-section="status" aria-label="Status">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+            </button>
+
+            <!-- Leaderboard (Award/Trophy) -->
+            <button class="nav-btn" data-section="leaderboard" aria-label="Leaderboard">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="7"></circle>
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+            </button>
+            <!-- Account (User) -->
+            <button class="nav-btn" data-section="account" aria-label="Account">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Right Actions: Language & Logout -->
+        <div class="right-actions" style="display: flex; align-items: center; gap: 1rem;">
+
+
+            <button class="logout-btn" id="logoutBtn" aria-label="Logout">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-content" style="padding-top: 100px; padding-left: 20px; padding-right: 20px;">
+        <!-- Home Section -->
+        <section id="home" class="content-section">
+            <div class="overview-box">
+                <h2 data-i18n="header_overview">Overview</h2>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-value" id="stat-failed">0</span>
+                        <span class="stat-label" data-i18n="stat_failed">Failed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="stat-completed">0</span>
+                        <span class="stat-label" data-i18n="stat_completed">Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="stat-progress">0</span>
+                        <span class="stat-label" data-i18n="stat_in_progress">In-Progress</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="stat-score">0</span>
+                        <span class="stat-label" data-i18n="stat_score">Score</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Box -->
+            <div class="team-box">
+                <h2 data-i18n="nav_team">Team Members</h2>
+                <div class="member-list" id="memberList">
+                    <!-- Members will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Tasks Box -->
+            <div class="tasks-box">
+                <h2 data-i18n="nav_tasks">Tasks</h2>
+                <div class="tasks-table-container">
+                    <table class="tasks-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 30px;"></th> <!-- Criticality -->
+                                <th data-i18n="th_title">Title</th>
+                                <th data-i18n="th_desc">Description</th>
+                                <th data-i18n="th_start">Start</th>
+                                <th data-i18n="th_end">End</th>
+                                <th style="width: 30px;"></th> <!-- Expand Action -->
+                            </tr>
+                        </thead>
+                        <tbody id="tasksList">
+                            <!-- Tasks will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Status Section -->
+        <section id="status" class="content-section hidden">
+            <div class="status-box">
+                <h2 data-i18n="header_teams_tasks">Teams Tasks</h2>
+                <div class="tasks-table-container">
+                    <table class="tasks-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 30px;"></th> <!-- Criticality -->
+                                <th data-i18n="th_title">Title</th>
+                                <th data-i18n="th_desc">Description</th>
+                                <th data-i18n="th_status">Status</th>
+                                <th data-i18n="th_start">Start</th>
+                                <th data-i18n="th_end">Time Left</th>
+                                <th style="width: 30px;"></th> <!-- Expand Action -->
+                            </tr>
+                        </thead>
+                        <tbody id="userStatusTasksList">
+                            <!-- User Tasks will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teams Section -->
+        <section id="teams" class="content-section hidden">
+            <h1 data-i18n="nav_team">Teams</h1>
+            <p>Team management and members.</p>
+        </section>
+
+        <!-- Tasks Section -->
+        <section id="tasks" class="content-section hidden">
+            <!-- System Tasks Panel -->
+            <div class="status-box">
+                <h2 style="margin-bottom: 1rem;" data-i18n="header_system_tasks">System Tasks</h2>
+                <div class="tasks-table-container">
+                    <table class="tasks-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 30px;"></th>
+                                <th data-i18n="th_title">Title</th>
+                                <th data-i18n="th_desc">Description</th>
+                                <th data-i18n="th_start">Start</th>
+                                <th data-i18n="th_end">End</th>
+                                <th style="width: 30px;"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="systemTasksList">
+                            <!-- Tasks will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leaderboard Section -->
+        <section id="leaderboard" class="content-section hidden">
+            <div class="status-box">
+                <h2 style="margin-bottom: 1rem;" data-i18n="header_leaderboard">Leaderboard</h2>
+                <div class="tasks-table-container">
+                    <table class="tasks-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 60px;" data-i18n="th_rank">Rank</th>
+                                <th data-i18n="th_group">Group Name</th>
+                                <th data-i18n="th_score">Score</th>
+                                <th data-i18n="th_members">Members</th>
+                                <th data-i18n="th_completed_tasks">Completed Tasks</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboardListCell">
+                            <!-- Leaderboard items will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Account Section -->
+        <section id="account" class="content-section hidden">
+            <div style="display: flex; gap: 2rem; max-width: 1000px; margin: 0 auto; flex-wrap: wrap;">
+                <!-- Profile Settings -->
+                <div class="account-box" style="flex: 1; min-width: 300px;">
+                    <h2 style="margin-bottom: 2rem; text-align: center;">Account Settings</h2>
+                    <form id="profileSettingsFormCell"
+                        style="display: flex; flex-direction: column; gap: 1.5rem; flex: 1; height: 100%;">
+
+                        <div class="form-group">
+                            <label for="profileNameCell"
+                                style="display: block; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem; text-align: center;">Full
+                                Name</label>
+                            <input type="text" id="profileNameCell" class="account-input"
+                                placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profileEmailCell"
+                                style="display: block; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem; text-align: center;">Email
+                                Address</label>
+                            <input type="email" id="profileEmailCell" class="account-input"
+                                placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profilePhoneCell"
+                                style="display: block; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem; text-align: center;">Phone
+                                Number</label>
+                            <input type="tel" id="profilePhoneCell" class="account-input"
+                                placeholder="Enter your phone number">
+                        </div>
+
+                        <div style="margin-top: auto;">
+                            <button type="submit" class="btn-primary" id="saveProfileBtnCell"
+                                style="width: 100%; border-radius: var(--radius-sm);">
+                                Confirm Changes
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Change Password -->
+                <div class="account-box" style="flex: 1; min-width: 300px;">
+                    <h2 style="margin-bottom: 2rem; text-align: center;">Change Password</h2>
+                    <form id="changePasswordFormCell"
+                        style="display: flex; flex-direction: column; gap: 1.5rem; flex: 1; height: 100%;">
+                        <div class="form-group">
+                            <label for="oldPasswordCell"
+                                style="display: block; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem; text-align: center;">Old
+                                Password</label>
+                            <div class="input-wrapper">
+                                <input type="password" id="oldPasswordCell" class="account-input"
+                                    placeholder="Current Password" required>
+                                <button type="button" class="toggle-password-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="newPasswordCell"
+                                style="display: block; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem; text-align: center;">New
+                                Password</label>
+                            <div class="input-wrapper">
+                                <input type="password" id="newPasswordCell" class="account-input"
+                                    placeholder="New Password" required>
+                                <button type="button" class="toggle-password-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPasswordCell"
+                                style="display: block; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem; text-align: center;">Confirm
+                                Password</label>
+                            <div class="input-wrapper">
+                                <input type="password" id="confirmPasswordCell" class="account-input"
+                                    placeholder="Confirm New Password" required>
+                                <button type="button" class="toggle-password-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary"
+                            style="width: 100%; margin-top: auto; border-radius: var(--radius-sm);">Update
+                            Password</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/script.js"></script>
+    <script src="/shader-background.js"></script>
+</body>
+
+</html>

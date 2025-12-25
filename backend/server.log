@@ -1,0 +1,1085 @@
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+Secure Server (HTTPS) is running on https://localhost:3000
+Connected to the SQLite database.
+Database tables initialized (groups, users, tasks, login).
+[2025-12-20T23:53:04.472Z] GET /
+[2025-12-20T23:53:04.565Z] GET /style.css
+[2025-12-20T23:53:04.584Z] GET /shader-background.js
+[2025-12-20T23:53:05.047Z] GET /script.js
+[2025-12-20T23:53:05.206Z] GET /favicon.ico
+[2025-12-20T23:55:38.586Z] POST /api/login
+[2025-12-20T23:55:38.765Z] GET /teacher.html
+[2025-12-20T23:55:38.788Z] GET /style.css
+[2025-12-20T23:55:38.806Z] GET /script.js
+[2025-12-20T23:55:38.808Z] GET /shader-background.js
+[2025-12-20T23:55:39.474Z] GET /api/groups
+[2025-12-20T23:55:39.480Z] GET /api/users
+[2025-12-20T23:55:39.491Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766274938,
+  exp: 1766278538
+}
+[2025-12-20T23:55:39.506Z] GET /api/groups
+[2025-12-20T23:55:39.508Z] GET /api/tasks?gid=all
+[2025-12-20T23:55:39.520Z] GET /api/users
+[2025-12-20T23:55:39.534Z] GET /api/profile
+[2025-12-20T23:55:39.538Z] GET /api/groups
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766274938,
+  exp: 1766278538
+}
+[2025-12-20T23:55:39.543Z] GET /api/tasks?gid=all
+[2025-12-20T23:55:39.560Z] GET /api/groups
+[2025-12-20T23:55:39.565Z] GET /api/tasks?gid=all
+[2025-12-20T23:55:39.573Z] GET /api/groups
+[2025-12-20T23:55:39.580Z] GET /api/groups
+[2025-12-20T23:55:39.591Z] GET /api/groups
+[2025-12-20T23:55:39.596Z] GET /api/groups
+[2025-12-20T23:55:39.599Z] GET /api/groups
+[2025-12-20T23:55:39.602Z] GET /api/groups
+[2025-12-21T00:08:42.387Z] GET /teacher.html
+[2025-12-21T00:08:42.409Z] GET /style.css
+[2025-12-21T00:08:42.418Z] GET /script.js
+[2025-12-21T00:08:42.419Z] GET /shader-background.js
+[2025-12-21T00:08:42.561Z] GET /api/groups
+[2025-12-21T00:08:42.564Z] GET /api/users
+[2025-12-21T00:08:42.595Z] GET /api/tasks?gid=all
+[2025-12-21T00:08:42.596Z] GET /api/groups
+[2025-12-21T00:08:42.597Z] GET /api/users
+[2025-12-21T00:08:42.611Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766274938,
+  exp: 1766278538
+}
+[2025-12-21T00:08:42.615Z] GET /api/tasks?gid=all
+[2025-12-21T00:08:42.617Z] GET /api/groups
+[2025-12-21T00:08:42.624Z] GET /api/profile
+[2025-12-21T00:08:42.625Z] GET /api/tasks?gid=all
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766274938,
+  exp: 1766278538
+}
+[2025-12-21T00:08:42.628Z] GET /api/groups
+[2025-12-21T00:08:42.637Z] GET /api/groups
+[2025-12-21T00:08:42.641Z] GET /api/groups
+[2025-12-21T00:08:42.645Z] GET /api/groups
+[2025-12-21T00:08:42.650Z] GET /api/groups
+[2025-12-21T00:08:42.657Z] GET /api/groups
+[2025-12-21T00:08:42.664Z] GET /api/groups
+[2025-12-21T00:08:47.883Z] GET /api/groups
+[2025-12-21T00:08:51.434Z] GET /api/groups
+[2025-12-21T00:15:38.770Z] GET /teacher.html
+[2025-12-21T00:15:38.796Z] GET /style.css
+[2025-12-21T00:15:38.803Z] GET /script.js
+[2025-12-21T00:15:38.815Z] GET /shader-background.js
+[2025-12-21T00:15:38.951Z] GET /api/groups
+[2025-12-21T00:15:38.952Z] GET /api/users
+[2025-12-21T00:15:38.958Z] GET /api/tasks?gid=all
+[2025-12-21T00:15:38.963Z] GET /api/profile
+[2025-12-21T00:15:38.963Z] GET /api/groups
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766274938,
+  exp: 1766278538
+}
+[2025-12-21T00:15:38.967Z] GET /api/users
+[2025-12-21T00:15:38.979Z] GET /api/groups
+[2025-12-21T00:15:38.979Z] GET /api/tasks?gid=all
+[2025-12-21T00:15:38.980Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766274938,
+  exp: 1766278538
+}
+[2025-12-21T00:15:38.993Z] GET /api/groups
+[2025-12-21T00:15:38.994Z] GET /api/tasks?gid=all
+[2025-12-21T00:15:39.002Z] GET /api/groups
+[2025-12-21T00:15:39.007Z] GET /api/groups
+[2025-12-21T00:15:39.010Z] GET /api/groups
+[2025-12-21T00:15:39.014Z] GET /api/groups
+[2025-12-21T00:15:39.017Z] GET /api/groups
+[2025-12-21T00:15:39.022Z] GET /api/groups
+[2025-12-21T00:16:41.208Z] GET /index.html
+[2025-12-21T00:16:41.239Z] GET /style.css
+[2025-12-21T00:16:41.243Z] GET /shader-background.js
+[2025-12-21T00:16:41.311Z] GET /script.js
+[2025-12-21T00:16:51.805Z] POST /api/login
+[2025-12-21T00:16:51.889Z] GET /leader.html
+[2025-12-21T00:16:51.910Z] GET /style.css
+[2025-12-21T00:16:51.914Z] GET /script.js
+[2025-12-21T00:16:51.919Z] GET /shader-background.js
+[2025-12-21T00:16:51.998Z] GET /api/groups
+[2025-12-21T00:16:52.001Z] GET /api/users
+[2025-12-21T00:16:52.012Z] GET /api/tasks?gid=1003
+[2025-12-21T00:16:52.014Z] GET /api/profile
+Decoded JWT User: {
+  id: 20,
+  role: 'LEADER',
+  email: 'a@a.a',
+  full_name: 'a',
+  iat: 1766276211,
+  exp: 1766279811
+}
+[2025-12-21T00:16:52.015Z] GET /api/groups
+[2025-12-21T00:16:52.021Z] GET /api/tasks?gid=1003
+[2025-12-21T00:16:52.022Z] GET /api/profile
+Decoded JWT User: {
+  id: 20,
+  role: 'LEADER',
+  email: 'a@a.a',
+  full_name: 'a',
+  iat: 1766276211,
+  exp: 1766279811
+}
+[2025-12-21T00:16:52.028Z] GET /api/tasks?gid=1003
+[2025-12-21T00:16:59.718Z] GET /index.html
+[2025-12-21T00:16:59.743Z] GET /style.css
+[2025-12-21T00:16:59.746Z] GET /shader-background.js
+[2025-12-21T00:16:59.801Z] GET /script.js
+[2025-12-21T00:17:12.766Z] POST /api/login
+[2025-12-21T00:17:12.850Z] GET /teacher.html
+[2025-12-21T00:17:12.870Z] GET /style.css
+[2025-12-21T00:17:12.874Z] GET /script.js
+[2025-12-21T00:17:12.878Z] GET /shader-background.js
+[2025-12-21T00:17:12.930Z] GET /api/groups
+[2025-12-21T00:17:12.938Z] GET /api/tasks?gid=all
+[2025-12-21T00:17:12.950Z] GET /api/profile
+[2025-12-21T00:17:12.951Z] GET /api/groups
+[2025-12-21T00:17:12.952Z] GET /api/users
+[2025-12-21T00:17:12.955Z] GET /api/tasks?gid=all
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276232,
+  exp: 1766279832
+}
+[2025-12-21T00:17:12.967Z] GET /api/groups
+[2025-12-21T00:17:12.969Z] GET /api/tasks?gid=all
+[2025-12-21T00:17:12.969Z] GET /api/users
+[2025-12-21T00:17:12.970Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276232,
+  exp: 1766279832
+}
+[2025-12-21T00:17:12.971Z] GET /api/groups
+[2025-12-21T00:17:12.978Z] GET /api/groups
+[2025-12-21T00:17:12.984Z] GET /api/groups
+[2025-12-21T00:17:12.991Z] GET /api/groups
+[2025-12-21T00:17:12.995Z] GET /api/groups
+[2025-12-21T00:17:12.999Z] GET /api/groups
+[2025-12-21T00:17:13.002Z] GET /api/groups
+[2025-12-21T00:19:40.392Z] GET /teacher.html
+[2025-12-21T00:19:40.452Z] GET /style.css
+[2025-12-21T00:19:40.474Z] GET /shader-background.js
+[2025-12-21T00:19:40.475Z] GET /script.js
+[2025-12-21T00:19:40.972Z] GET /api/groups
+[2025-12-21T00:19:40.978Z] GET /api/users
+[2025-12-21T00:19:40.979Z] GET /api/tasks?gid=all
+[2025-12-21T00:19:40.984Z] GET /api/groups
+[2025-12-21T00:19:41.007Z] GET /api/tasks?gid=all
+[2025-12-21T00:19:41.017Z] GET /api/groups
+[2025-12-21T00:19:41.019Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276232,
+  exp: 1766279832
+}
+[2025-12-21T00:19:41.045Z] GET /api/tasks?gid=all
+[2025-12-21T00:19:41.050Z] GET /api/users
+[2025-12-21T00:19:41.057Z] GET /api/groups
+[2025-12-21T00:19:41.063Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276232,
+  exp: 1766279832
+}
+[2025-12-21T00:19:41.080Z] GET /api/groups
+[2025-12-21T00:19:41.092Z] GET /api/groups
+[2025-12-21T00:19:41.099Z] GET /api/groups
+[2025-12-21T00:19:41.110Z] GET /api/groups
+[2025-12-21T00:19:41.120Z] GET /api/groups
+[2025-12-21T00:19:41.133Z] GET /api/groups
+[2025-12-21T00:22:31.856Z] GET /teacher.html
+[2025-12-21T00:22:31.884Z] GET /style.css
+[2025-12-21T00:22:31.891Z] GET /script.js
+[2025-12-21T00:22:31.892Z] GET /shader-background.js
+[2025-12-21T00:22:31.968Z] GET /api/groups
+[2025-12-21T00:22:31.969Z] GET /api/users
+[2025-12-21T00:22:31.978Z] GET /api/tasks?gid=all
+[2025-12-21T00:22:31.985Z] GET /api/profile
+[2025-12-21T00:22:31.985Z] GET /api/groups
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276232,
+  exp: 1766279832
+}
+[2025-12-21T00:22:31.989Z] GET /api/users
+[2025-12-21T00:22:32.003Z] GET /api/tasks?gid=all
+[2025-12-21T00:22:32.011Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276232,
+  exp: 1766279832
+}
+[2025-12-21T00:22:32.015Z] GET /api/groups
+[2025-12-21T00:22:32.017Z] GET /api/tasks?gid=all
+[2025-12-21T00:22:32.027Z] GET /api/groups
+[2025-12-21T00:22:32.036Z] GET /api/groups
+[2025-12-21T00:22:32.043Z] GET /api/groups
+[2025-12-21T00:22:32.049Z] GET /api/groups
+[2025-12-21T00:22:32.054Z] GET /api/groups
+[2025-12-21T00:22:32.057Z] GET /api/groups
+[2025-12-21T00:22:32.060Z] GET /api/groups
+[2025-12-21T00:22:37.674Z] GET /teacher.html
+[2025-12-21T00:22:37.698Z] GET /style.css
+[2025-12-21T00:22:37.699Z] GET /script.js
+[2025-12-21T00:22:37.701Z] GET /shader-background.js
+[2025-12-21T00:22:37.772Z] GET /api/groups
+[2025-12-21T00:22:37.772Z] GET /api/users
+[2025-12-21T00:22:37.772Z] GET /api/tasks?gid=all
+[2025-12-21T00:22:37.774Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276232,
+  exp: 1766279832
+}
+[2025-12-21T00:22:37.784Z] GET /api/users
+[2025-12-21T00:22:37.785Z] GET /api/tasks?gid=all
+[2025-12-21T00:22:37.786Z] GET /api/profile
+[2025-12-21T00:22:37.786Z] GET /api/groups
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276232,
+  exp: 1766279832
+}
+[2025-12-21T00:22:37.796Z] GET /api/tasks?gid=all
+[2025-12-21T00:22:37.796Z] GET /api/groups
+[2025-12-21T00:22:37.803Z] GET /api/groups
+[2025-12-21T00:22:37.808Z] GET /api/groups
+[2025-12-21T00:22:37.812Z] GET /api/groups
+[2025-12-21T00:22:37.819Z] GET /api/groups
+[2025-12-21T00:22:37.823Z] GET /api/groups
+[2025-12-21T00:22:37.827Z] GET /api/groups
+[2025-12-21T00:22:37.834Z] GET /api/groups
+[2025-12-21T00:22:48.157Z] GET /teacher.html
+[2025-12-21T00:22:48.171Z] GET /style.css
+[2025-12-21T00:22:48.174Z] GET /shader-background.js
+[2025-12-21T00:22:48.178Z] GET /script.js
+[2025-12-21T00:22:48.229Z] GET /api/groups
+[2025-12-21T00:22:48.234Z] GET /api/users
+[2025-12-21T00:22:48.241Z] GET /api/groups
+[2025-12-21T00:22:48.251Z] GET /api/users
+[2025-12-21T00:22:48.252Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276232,
+  exp: 1766279832
+}
+[2025-12-21T00:22:48.257Z] GET /api/tasks?gid=all
+[2025-12-21T00:22:48.257Z] GET /api/groups
+[2025-12-21T00:22:48.267Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276232,
+  exp: 1766279832
+}
+[2025-12-21T00:22:48.269Z] GET /api/tasks?gid=all
+[2025-12-21T00:22:48.269Z] GET /api/groups
+[2025-12-21T00:22:48.276Z] GET /api/tasks?gid=all
+[2025-12-21T00:22:48.277Z] GET /api/groups
+[2025-12-21T00:22:48.280Z] GET /api/groups
+[2025-12-21T00:22:48.284Z] GET /api/groups
+[2025-12-21T00:22:48.288Z] GET /api/groups
+[2025-12-21T00:22:48.292Z] GET /api/groups
+[2025-12-21T00:22:48.295Z] GET /api/groups
+[2025-12-21T00:23:08.270Z] GET /teacher.html
+[2025-12-21T00:23:08.287Z] GET /style.css
+[2025-12-21T00:23:08.293Z] GET /shader-background.js
+[2025-12-21T00:23:08.296Z] GET /script.js
+[2025-12-21T00:23:08.358Z] GET /api/groups
+[2025-12-21T00:23:08.367Z] GET /api/users
+[2025-12-21T00:23:08.375Z] GET /api/tasks?gid=all
+[2025-12-21T00:23:08.377Z] GET /api/groups
+[2025-12-21T00:23:08.377Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276232,
+  exp: 1766279832
+}
+[2025-12-21T00:23:08.388Z] GET /api/users
+[2025-12-21T00:23:08.392Z] GET /api/tasks?gid=all
+[2025-12-21T00:23:08.394Z] GET /api/groups
+[2025-12-21T00:23:08.399Z] GET /api/tasks?gid=all
+[2025-12-21T00:23:08.399Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276232,
+  exp: 1766279832
+}
+[2025-12-21T00:23:08.401Z] GET /api/groups
+[2025-12-21T00:23:08.413Z] GET /api/groups
+[2025-12-21T00:23:08.418Z] GET /api/groups
+[2025-12-21T00:23:08.423Z] GET /api/groups
+[2025-12-21T00:23:08.428Z] GET /api/groups
+[2025-12-21T00:23:08.437Z] GET /api/groups
+[2025-12-21T00:23:08.444Z] GET /api/groups
+[2025-12-21T00:24:32.157Z] GET /index.html
+[2025-12-21T00:24:32.176Z] GET /style.css
+[2025-12-21T00:24:32.179Z] GET /shader-background.js
+[2025-12-21T00:24:32.240Z] GET /script.js
+[2025-12-21T00:24:47.181Z] POST /api/login
+[2025-12-21T00:24:47.258Z] GET /teacher.html
+[2025-12-21T00:24:47.276Z] GET /style.css
+[2025-12-21T00:24:47.281Z] GET /shader-background.js
+[2025-12-21T00:24:47.288Z] GET /script.js
+[2025-12-21T00:24:47.369Z] GET /api/groups
+[2025-12-21T00:24:47.376Z] GET /api/users
+[2025-12-21T00:24:47.389Z] GET /api/profile
+[2025-12-21T00:24:47.390Z] GET /api/tasks?gid=all
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:24:47.397Z] GET /api/groups
+[2025-12-21T00:24:47.402Z] GET /api/users
+[2025-12-21T00:24:47.411Z] GET /api/groups
+[2025-12-21T00:24:47.412Z] GET /api/tasks?gid=all
+[2025-12-21T00:24:47.412Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:24:47.419Z] GET /api/groups
+[2025-12-21T00:24:47.421Z] GET /api/tasks?gid=all
+[2025-12-21T00:24:47.424Z] GET /api/groups
+[2025-12-21T00:24:47.428Z] GET /api/groups
+[2025-12-21T00:24:47.432Z] GET /api/groups
+[2025-12-21T00:24:47.436Z] GET /api/groups
+[2025-12-21T00:24:47.438Z] GET /api/groups
+[2025-12-21T00:24:47.441Z] GET /api/groups
+[2025-12-21T00:26:40.347Z] GET /teacher.html
+[2025-12-21T00:26:40.385Z] GET /style.css
+[2025-12-21T00:26:40.399Z] GET /shader-background.js
+[2025-12-21T00:26:40.411Z] GET /script.js
+[2025-12-21T00:26:40.686Z] GET /api/groups
+[2025-12-21T00:26:40.687Z] GET /api/users
+[2025-12-21T00:26:40.717Z] GET /api/tasks?gid=all
+[2025-12-21T00:26:40.721Z] GET /api/users
+[2025-12-21T00:26:40.725Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:26:40.732Z] GET /api/groups
+[2025-12-21T00:26:40.738Z] GET /api/tasks?gid=all
+[2025-12-21T00:26:40.753Z] GET /api/groups
+[2025-12-21T00:26:40.761Z] GET /api/profile
+[2025-12-21T00:26:40.765Z] GET /api/groups
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:26:40.768Z] GET /api/tasks?gid=all
+[2025-12-21T00:26:40.778Z] GET /api/groups
+[2025-12-21T00:26:40.790Z] GET /api/groups
+[2025-12-21T00:26:40.798Z] GET /api/groups
+[2025-12-21T00:26:40.803Z] GET /api/groups
+[2025-12-21T00:26:40.811Z] GET /api/groups
+[2025-12-21T00:26:40.825Z] GET /api/groups
+[2025-12-21T00:28:28.004Z] GET /teacher.html
+[2025-12-21T00:28:28.064Z] GET /style.css
+[2025-12-21T00:28:28.072Z] GET /shader-background.js
+[2025-12-21T00:28:28.077Z] GET /script.js
+[2025-12-21T00:28:28.237Z] GET /api/groups
+[2025-12-21T00:28:28.246Z] GET /api/users
+[2025-12-21T00:28:28.252Z] GET /api/groups
+[2025-12-21T00:28:28.261Z] GET /api/profile
+[2025-12-21T00:28:28.261Z] GET /api/tasks?gid=all
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:28:28.264Z] GET /api/users
+[2025-12-21T00:28:28.265Z] GET /api/groups
+[2025-12-21T00:28:28.272Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:28:28.274Z] GET /api/tasks?gid=all
+[2025-12-21T00:28:28.275Z] GET /api/groups
+[2025-12-21T00:28:28.287Z] GET /api/tasks?gid=all
+[2025-12-21T00:28:28.288Z] GET /api/groups
+[2025-12-21T00:28:28.295Z] GET /api/groups
+[2025-12-21T00:28:28.299Z] GET /api/groups
+[2025-12-21T00:28:28.302Z] GET /api/groups
+[2025-12-21T00:28:28.307Z] GET /api/groups
+[2025-12-21T00:28:28.312Z] GET /api/groups
+[2025-12-21T00:31:54.886Z] GET /teacher.html
+[2025-12-21T00:31:54.906Z] GET /style.css
+[2025-12-21T00:31:54.911Z] GET /script.js
+[2025-12-21T00:31:54.917Z] GET /shader-background.js
+[2025-12-21T00:31:54.985Z] GET /api/groups
+[2025-12-21T00:31:54.994Z] GET /api/users
+[2025-12-21T00:31:54.997Z] GET /api/tasks?gid=all
+[2025-12-21T00:31:54.999Z] GET /api/groups
+[2025-12-21T00:31:54.999Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:31:55.014Z] GET /api/groups
+[2025-12-21T00:31:55.014Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:31:55.018Z] GET /api/users
+[2025-12-21T00:31:55.019Z] GET /api/tasks?gid=all
+[2025-12-21T00:31:55.022Z] GET /api/groups
+[2025-12-21T00:31:55.028Z] GET /api/tasks?gid=all
+[2025-12-21T00:31:55.029Z] GET /api/groups
+[2025-12-21T00:31:55.034Z] GET /api/groups
+[2025-12-21T00:31:55.037Z] GET /api/groups
+[2025-12-21T00:31:55.039Z] GET /api/groups
+[2025-12-21T00:31:55.043Z] GET /api/groups
+[2025-12-21T00:31:55.046Z] GET /api/groups
+[2025-12-21T00:32:18.702Z] GET /teacher.html
+[2025-12-21T00:32:18.719Z] GET /style.css
+[2025-12-21T00:32:18.724Z] GET /shader-background.js
+[2025-12-21T00:32:18.727Z] GET /script.js
+[2025-12-21T00:32:18.812Z] GET /api/groups
+[2025-12-21T00:32:18.823Z] GET /api/users
+[2025-12-21T00:32:18.824Z] GET /api/groups
+[2025-12-21T00:32:18.834Z] GET /api/tasks?gid=all
+[2025-12-21T00:32:18.835Z] GET /api/users
+[2025-12-21T00:32:18.836Z] GET /api/profile
+[2025-12-21T00:32:18.836Z] GET /api/groups
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:32:18.852Z] GET /api/profile
+[2025-12-21T00:32:18.852Z] GET /api/tasks?gid=all
+[2025-12-21T00:32:18.852Z] GET /api/groups
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:32:18.866Z] GET /api/tasks?gid=all
+[2025-12-21T00:32:18.867Z] GET /api/groups
+[2025-12-21T00:32:18.874Z] GET /api/groups
+[2025-12-21T00:32:18.878Z] GET /api/groups
+[2025-12-21T00:32:18.882Z] GET /api/groups
+[2025-12-21T00:32:18.888Z] GET /api/groups
+[2025-12-21T00:32:18.892Z] GET /api/groups
+[2025-12-21T00:38:52.490Z] GET /teacher.html
+[2025-12-21T00:38:52.508Z] GET /style.css
+[2025-12-21T00:38:52.513Z] GET /shader-background.js
+[2025-12-21T00:38:52.519Z] GET /script.js
+[2025-12-21T00:38:52.705Z] GET /api/groups
+[2025-12-21T00:38:52.715Z] GET /api/users
+[2025-12-21T00:38:52.716Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:38:52.730Z] GET /api/groups
+[2025-12-21T00:38:52.736Z] GET /api/tasks?gid=all
+[2025-12-21T00:38:52.738Z] GET /api/users
+[2025-12-21T00:38:52.738Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:38:52.749Z] GET /api/groups
+[2025-12-21T00:38:52.754Z] GET /api/groups
+[2025-12-21T00:38:52.755Z] GET /api/tasks?gid=all
+[2025-12-21T00:38:52.766Z] GET /api/groups
+[2025-12-21T00:38:52.767Z] GET /api/tasks?gid=all
+[2025-12-21T00:38:52.775Z] GET /api/groups
+[2025-12-21T00:38:52.783Z] GET /api/groups
+[2025-12-21T00:38:52.794Z] GET /api/groups
+[2025-12-21T00:38:52.798Z] GET /api/groups
+[2025-12-21T00:38:52.802Z] GET /api/groups
+[2025-12-21T00:39:44.636Z] GET /api/tasks/21
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:39:44.649Z] GET /api/groups
+[2025-12-21T00:44:22.163Z] GET /teacher.html
+[2025-12-21T00:44:22.173Z] GET /style.css
+[2025-12-21T00:44:22.181Z] GET /shader-background.js
+[2025-12-21T00:44:22.200Z] GET /script.js
+[2025-12-21T00:44:22.389Z] GET /api/groups
+[2025-12-21T00:44:22.398Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:44:22.400Z] GET /api/groups
+[2025-12-21T00:44:22.407Z] GET /api/groups
+[2025-12-21T00:44:22.411Z] GET /api/groups
+[2025-12-21T00:44:22.413Z] GET /api/groups
+[2025-12-21T00:44:22.417Z] GET /api/groups
+[2025-12-21T00:44:22.421Z] GET /api/groups
+[2025-12-21T00:44:22.428Z] GET /api/groups
+[2025-12-21T00:44:22.433Z] GET /api/groups
+[2025-12-21T00:44:30.395Z] GET /teacher.html
+[2025-12-21T00:44:30.415Z] GET /style.css
+[2025-12-21T00:44:30.425Z] GET /script.js
+[2025-12-21T00:44:30.432Z] GET /shader-background.js
+[2025-12-21T00:44:30.585Z] GET /api/groups
+[2025-12-21T00:44:30.600Z] GET /api/groups
+[2025-12-21T00:44:30.605Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:44:30.615Z] GET /api/groups
+[2025-12-21T00:44:30.619Z] GET /api/groups
+[2025-12-21T00:44:30.622Z] GET /api/groups
+[2025-12-21T00:44:30.624Z] GET /api/groups
+[2025-12-21T00:44:30.627Z] GET /api/groups
+[2025-12-21T00:44:30.630Z] GET /api/groups
+[2025-12-21T00:44:30.633Z] GET /api/groups
+[2025-12-21T00:44:50.011Z] GET /teacher.html
+[2025-12-21T00:44:50.031Z] GET /style.css
+[2025-12-21T00:44:50.038Z] GET /script.js
+[2025-12-21T00:44:50.039Z] GET /shader-background.js
+[2025-12-21T00:44:50.107Z] GET /api/groups
+[2025-12-21T00:44:50.116Z] GET /api/groups
+[2025-12-21T00:44:50.118Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:44:50.136Z] GET /api/groups
+[2025-12-21T00:44:50.140Z] GET /api/groups
+[2025-12-21T00:44:50.144Z] GET /api/groups
+[2025-12-21T00:44:50.149Z] GET /api/groups
+[2025-12-21T00:44:50.154Z] GET /api/groups
+[2025-12-21T00:44:50.160Z] GET /api/groups
+[2025-12-21T00:44:50.168Z] GET /api/groups
+[2025-12-21T00:45:09.286Z] GET /api/groups
+[2025-12-21T00:45:21.929Z] GET /api/groups
+[2025-12-21T00:45:28.747Z] GET /api/groups
+[2025-12-21T00:45:36.303Z] GET /teacher.html
+[2025-12-21T00:45:36.326Z] GET /style.css
+[2025-12-21T00:45:36.333Z] GET /script.js
+[2025-12-21T00:45:36.334Z] GET /shader-background.js
+[2025-12-21T00:45:36.419Z] GET /api/groups
+[2025-12-21T00:45:36.428Z] GET /api/groups
+[2025-12-21T00:45:36.430Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:45:36.448Z] GET /api/groups
+[2025-12-21T00:45:36.452Z] GET /api/groups
+[2025-12-21T00:45:36.455Z] GET /api/groups
+[2025-12-21T00:45:36.458Z] GET /api/groups
+[2025-12-21T00:45:36.462Z] GET /api/groups
+[2025-12-21T00:45:36.468Z] GET /api/groups
+[2025-12-21T00:45:36.474Z] GET /api/groups
+[2025-12-21T00:47:19.808Z] GET /teacher.html
+[2025-12-21T00:47:19.825Z] GET /style.css
+[2025-12-21T00:47:19.837Z] GET /shader-background.js
+[2025-12-21T00:47:19.844Z] GET /script.js
+[2025-12-21T00:47:20.065Z] GET /api/groups
+[2025-12-21T00:47:20.074Z] GET /api/groups
+[2025-12-21T00:47:20.075Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:47:20.086Z] GET /api/groups
+[2025-12-21T00:47:20.090Z] GET /api/groups
+[2025-12-21T00:47:20.094Z] GET /api/groups
+[2025-12-21T00:47:20.097Z] GET /api/groups
+[2025-12-21T00:47:20.099Z] GET /api/groups
+[2025-12-21T00:47:20.101Z] GET /api/groups
+[2025-12-21T00:47:20.103Z] GET /api/groups
+[2025-12-21T00:47:31.546Z] GET /teacher.html
+[2025-12-21T00:47:31.590Z] GET /style.css
+[2025-12-21T00:47:31.605Z] GET /shader-background.js
+[2025-12-21T00:47:31.613Z] GET /script.js
+[2025-12-21T00:47:31.792Z] GET /api/groups
+[2025-12-21T00:47:31.797Z] GET /api/users
+[2025-12-21T00:47:31.809Z] GET /api/tasks?gid=all
+[2025-12-21T00:47:31.810Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:47:31.814Z] GET /api/groups
+[2025-12-21T00:47:31.825Z] GET /api/tasks?gid=all
+[2025-12-21T00:47:31.826Z] GET /api/groups
+[2025-12-21T00:47:31.827Z] GET /api/profile
+[2025-12-21T00:47:31.827Z] GET /api/users
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:47:31.833Z] GET /api/tasks?gid=all
+[2025-12-21T00:47:31.834Z] GET /api/groups
+[2025-12-21T00:47:31.837Z] GET /api/groups
+[2025-12-21T00:47:31.841Z] GET /api/groups
+[2025-12-21T00:47:31.848Z] GET /api/groups
+[2025-12-21T00:47:31.854Z] GET /api/groups
+[2025-12-21T00:47:31.859Z] GET /api/groups
+[2025-12-21T00:47:31.864Z] GET /api/groups
+[2025-12-21T00:48:24.918Z] GET /teacher.html
+[2025-12-21T00:48:24.962Z] GET /style.css
+[2025-12-21T00:48:24.991Z] GET /shader-background.js
+[2025-12-21T00:48:24.996Z] GET /script.js
+[2025-12-21T00:48:25.250Z] GET /api/groups
+[2025-12-21T00:48:25.320Z] GET /api/users
+[2025-12-21T00:48:25.323Z] GET /api/groups
+[2025-12-21T00:48:25.325Z] GET /api/tasks?gid=all
+[2025-12-21T00:48:25.331Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:48:25.360Z] GET /api/users
+[2025-12-21T00:48:25.379Z] GET /api/profile
+[2025-12-21T00:48:25.381Z] GET /api/groups
+[2025-12-21T00:48:25.382Z] GET /api/tasks?gid=all
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:48:25.395Z] GET /api/groups
+[2025-12-21T00:48:25.395Z] GET /api/tasks?gid=all
+[2025-12-21T00:48:25.400Z] GET /api/groups
+[2025-12-21T00:48:25.403Z] GET /api/groups
+[2025-12-21T00:48:25.409Z] GET /api/groups
+[2025-12-21T00:48:25.412Z] GET /api/groups
+[2025-12-21T00:48:25.416Z] GET /api/groups
+[2025-12-21T00:48:25.429Z] GET /api/groups
+[2025-12-21T00:48:36.208Z] GET /api/groups
+[2025-12-21T00:52:49.224Z] GET /teacher.html
+[2025-12-21T00:52:49.251Z] GET /style.css
+[2025-12-21T00:52:49.257Z] GET /script.js
+[2025-12-21T00:52:49.264Z] GET /shader-background.js
+[2025-12-21T00:52:49.434Z] GET /api/groups
+[2025-12-21T00:52:49.452Z] GET /api/users
+[2025-12-21T00:52:49.455Z] GET /api/tasks?gid=all
+[2025-12-21T00:52:49.456Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:52:49.458Z] GET /api/groups
+[2025-12-21T00:52:49.469Z] GET /api/tasks?gid=all
+[2025-12-21T00:52:49.469Z] GET /api/groups
+[2025-12-21T00:52:49.470Z] GET /api/users
+[2025-12-21T00:52:49.471Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T00:52:49.477Z] GET /api/groups
+[2025-12-21T00:52:49.477Z] GET /api/tasks?gid=all
+[2025-12-21T00:52:49.480Z] GET /api/groups
+[2025-12-21T00:52:49.482Z] GET /api/groups
+[2025-12-21T00:52:49.485Z] GET /api/groups
+[2025-12-21T00:52:49.489Z] GET /api/groups
+[2025-12-21T00:52:49.493Z] GET /api/groups
+[2025-12-21T00:52:49.495Z] GET /api/groups
+[2025-12-21T00:52:59.311Z] GET /api/groups
+[2025-12-21T00:53:02.239Z] GET /api/groups
+[2025-12-21T00:53:05.075Z] GET /api/users
+[2025-12-21T00:53:07.958Z] GET /api/users
+[2025-12-21T00:53:12.159Z] GET /api/tasks?gid=1004
+[2025-12-21T00:53:14.851Z] GET /api/tasks?gid=1003
+[2025-12-21T00:53:25.344Z] GET /api/tasks?gid=1004
+[2025-12-21T00:53:28.328Z] GET /api/tasks?gid=1003
+[2025-12-21T00:53:32.924Z] GET /api/groups
+[2025-12-21T00:53:55.440Z] GET /api/groups
+[2025-12-21T00:54:02.737Z] GET /api/groups
+[2025-12-21T00:54:17.260Z] GET /api/groups
+[2025-12-21T00:54:20.727Z] GET /api/groups
+[2025-12-21T01:02:30.284Z] GET /teacher.html
+[2025-12-21T01:02:30.311Z] GET /style.css
+[2025-12-21T01:02:30.333Z] GET /script.js
+[2025-12-21T01:02:30.345Z] GET /shader-background.js
+[2025-12-21T01:02:30.443Z] GET /api/groups
+[2025-12-21T01:02:30.445Z] GET /api/users
+[2025-12-21T01:02:30.447Z] GET /api/tasks?gid=all
+[2025-12-21T01:02:30.469Z] GET /api/profile
+[2025-12-21T01:02:30.470Z] GET /api/groups
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T01:02:30.474Z] GET /api/tasks?gid=all
+[2025-12-21T01:02:30.494Z] GET /api/profile
+[2025-12-21T01:02:30.495Z] GET /api/groups
+[2025-12-21T01:02:30.495Z] GET /api/tasks?gid=all
+[2025-12-21T01:02:30.496Z] GET /api/users
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T01:02:30.514Z] GET /api/groups
+[2025-12-21T01:02:30.534Z] GET /api/groups
+[2025-12-21T01:02:30.549Z] GET /api/groups
+[2025-12-21T01:02:30.559Z] GET /api/groups
+[2025-12-21T01:02:30.570Z] GET /api/groups
+[2025-12-21T01:02:30.574Z] GET /api/groups
+[2025-12-21T01:02:30.579Z] GET /api/groups
+[2025-12-21T01:02:34.159Z] GET /api/groups
+[2025-12-21T01:07:07.681Z] GET /teacher.html
+[2025-12-21T01:07:07.694Z] GET /style.css
+[2025-12-21T01:07:07.701Z] GET /shader-background.js
+[2025-12-21T01:07:07.709Z] GET /script.js
+[2025-12-21T01:07:07.855Z] GET /api/groups
+[2025-12-21T01:07:07.862Z] GET /api/users
+[2025-12-21T01:07:07.879Z] GET /api/tasks?gid=all
+[2025-12-21T01:07:07.880Z] GET /api/profile
+[2025-12-21T01:07:07.880Z] GET /api/users
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T01:07:07.881Z] GET /api/groups
+[2025-12-21T01:07:07.889Z] GET /api/profile
+[2025-12-21T01:07:07.890Z] GET /api/groups
+[2025-12-21T01:07:07.890Z] GET /api/tasks?gid=all
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T01:07:07.897Z] GET /api/groups
+[2025-12-21T01:07:07.898Z] GET /api/tasks?gid=all
+[2025-12-21T01:07:07.900Z] GET /api/groups
+[2025-12-21T01:07:07.902Z] GET /api/groups
+[2025-12-21T01:07:07.904Z] GET /api/groups
+[2025-12-21T01:07:07.906Z] GET /api/groups
+[2025-12-21T01:07:07.908Z] GET /api/groups
+[2025-12-21T01:07:07.909Z] GET /api/groups
+[2025-12-21T01:07:11.532Z] GET /api/groups
+[2025-12-21T01:17:54.261Z] GET /teacher.html
+[2025-12-21T01:17:54.292Z] GET /style.css
+[2025-12-21T01:17:54.308Z] GET /script.js
+[2025-12-21T01:17:54.314Z] GET /shader-background.js
+[2025-12-21T01:17:54.497Z] GET /api/groups
+[2025-12-21T01:17:54.500Z] GET /api/users
+[2025-12-21T01:17:54.510Z] GET /api/tasks?gid=all
+[2025-12-21T01:17:54.517Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T01:17:54.538Z] GET /api/users
+[2025-12-21T01:17:54.538Z] GET /api/groups
+[2025-12-21T01:17:54.539Z] GET /api/tasks?gid=all
+[2025-12-21T01:17:54.540Z] GET /api/profile
+Decoded JWT User: {
+  id: 1,
+  role: 'TEACHER',
+  email: 'teacher@test.com',
+  full_name: 'Teacher User',
+  iat: 1766276687,
+  exp: 1766280287
+}
+[2025-12-21T01:17:54.554Z] GET /api/tasks?gid=all
+[2025-12-21T01:17:54.554Z] GET /api/groups
+[2025-12-21T01:17:54.559Z] GET /api/groups
+[2025-12-21T01:17:54.564Z] GET /api/groups
+[2025-12-21T01:17:54.567Z] GET /api/groups
+[2025-12-21T01:17:54.571Z] GET /api/groups
+[2025-12-21T01:17:54.575Z] GET /api/groups
+[2025-12-21T01:17:54.579Z] GET /api/groups
+[2025-12-21T01:17:54.583Z] GET /api/groups
+[2025-12-21T01:17:58.410Z] GET /api/groups
+[2025-12-21T01:18:04.059Z] GET /index.html
+[2025-12-21T01:18:04.091Z] GET /style.css
+[2025-12-21T01:18:04.094Z] GET /shader-background.js
+[2025-12-21T01:18:04.134Z] GET /script.js
+[2025-12-21T01:18:21.669Z] POST /api/login
+[2025-12-21T01:18:21.764Z] GET /leader.html
+[2025-12-21T01:18:21.792Z] GET /style.css
+[2025-12-21T01:18:21.800Z] GET /script.js
+[2025-12-21T01:18:21.802Z] GET /shader-background.js
+[2025-12-21T01:18:21.881Z] GET /api/groups
+[2025-12-21T01:18:21.882Z] GET /api/users
+[2025-12-21T01:18:21.894Z] GET /api/profile
+Decoded JWT User: {
+  id: 20,
+  role: 'LEADER',
+  email: 'a@a.a',
+  full_name: 'a',
+  iat: 1766279901,
+  exp: 1766283501
+}
+[2025-12-21T01:18:21.899Z] GET /api/tasks?gid=1003
+[2025-12-21T01:18:21.914Z] GET /api/groups
+[2025-12-21T01:18:21.915Z] GET /api/profile
+[2025-12-21T01:18:21.916Z] GET /api/tasks?gid=1003
+Decoded JWT User: {
+  id: 20,
+  role: 'LEADER',
+  email: 'a@a.a',
+  full_name: 'a',
+  iat: 1766279901,
+  exp: 1766283501
+}
+[2025-12-21T01:18:21.924Z] GET /api/tasks?gid=1003
+[2025-12-21T01:18:34.694Z] GET /index.html
+[2025-12-21T01:18:34.716Z] GET /style.css
+[2025-12-21T01:18:34.721Z] GET /shader-background.js
+[2025-12-21T01:18:34.748Z] GET /script.js
+[2025-12-21T21:16:10.546Z] GET /
+[2025-12-21T21:16:10.609Z] GET /nice%20ports%2C/Tri%6Eity.txt%2ebak
+[2025-12-21T21:24:12.427Z] GET /
+[2025-12-21T21:24:33.479Z] GET /
+[2025-12-21T21:24:33.519Z] GET /style.css
+[2025-12-21T21:24:33.522Z] GET /shader-background.js
+[2025-12-21T21:24:33.992Z] GET /script.js
+[2025-12-21T21:24:34.137Z] GET /favicon.ico
+[2025-12-21T21:24:50.304Z] GET /script.js
+[2025-12-21T21:25:13.557Z] GET /api/groups
+[2025-12-21T21:26:03.985Z] GET /api/users
+[2025-12-21T21:27:19.919Z] GET /api/tasks?gid=all
+[2025-12-21T21:32:21.209Z] POST /api/login
+[2025-12-21T21:32:21.263Z] POST /api/login
+[2025-12-21T21:32:21.319Z] POST /api/login
+[2025-12-21T21:32:21.371Z] POST /api/login
+[2025-12-21T21:32:21.375Z] POST /api/login
+[2025-12-21T21:32:21.378Z] POST /api/login
+[2025-12-21T21:32:21.381Z] POST /api/login
+[2025-12-21T21:32:21.384Z] POST /api/login
+[2025-12-21T21:32:21.387Z] POST /api/login
+[2025-12-21T21:32:56.419Z] POST /api/users/add
+[2025-12-21T21:33:39.457Z] POST /api/login
+[2025-12-21T21:34:08.031Z] GET /shader-background.js
+[2025-12-21T21:38:50.543Z] GET /package.json
+[2025-12-21T21:39:14.555Z] POST /api/tasks/create
+[2025-12-21T21:41:03.017Z] POST /api/login
+[2025-12-21T21:42:21.004Z] POST /api/login
+[2025-12-21T21:43:18.232Z] GET /robots.txt
+[2025-12-21T21:44:08.641Z] POST /api/login
+[2025-12-21T21:48:12.591Z] POST /api/login
+Bcrypt Error: Error: data and hash must be strings
+    at Object.compare (/home/arch/injaZ2.0/backend/node_modules/bcrypt/bcrypt.js:211:17)
+    at Statement.<anonymous> (/home/arch/injaZ2.0/backend/server.js:373:28)
+[2025-12-21T21:56:31.918Z] POST /api/login
+Bcrypt Error: Error: data and hash must be strings
+    at Object.compare (/home/arch/injaZ2.0/backend/node_modules/bcrypt/bcrypt.js:211:17)
+    at Statement.<anonymous> (/home/arch/injaZ2.0/backend/server.js:373:28)
+[2025-12-21T22:13:04.801Z] GET /api/users
+[2025-12-21T22:13:08.130Z] GET /api/tasks
+[2025-12-21T22:32:05.262Z] GET /
+[2025-12-21T22:32:05.297Z] GET /style.css
+[2025-12-21T22:32:05.303Z] GET /shader-background.js
+[2025-12-21T22:32:05.344Z] GET /script.js
+[2025-12-21T22:32:18.666Z] POST /api/login
+[2025-12-21T22:32:18.734Z] GET /leader.html
+[2025-12-21T22:32:18.761Z] GET /style.css
+[2025-12-21T22:32:18.768Z] GET /script.js
+[2025-12-21T22:32:18.771Z] GET /shader-background.js
+[2025-12-21T22:32:19.165Z] GET /api/groups
+[2025-12-21T22:32:19.171Z] GET /api/users
+[2025-12-21T22:32:19.174Z] GET /api/tasks?gid=1003
+[2025-12-21T22:32:19.175Z] GET /api/profile
+Decoded JWT User: {
+  id: 20,
+  role: 'LEADER',
+  email: 'a@a.a',
+  full_name: 'a',
+  iat: 1766356338,
+  exp: 1766359938
+}
+[2025-12-21T22:32:19.179Z] GET /api/groups
+[2025-12-21T22:32:19.189Z] GET /api/tasks?gid=1003
+[2025-12-21T22:32:19.190Z] GET /api/profile
+Decoded JWT User: {
+  id: 20,
+  role: 'LEADER',
+  email: 'a@a.a',
+  full_name: 'a',
+  iat: 1766356338,
+  exp: 1766359938
+}
+[2025-12-21T22:32:19.193Z] GET /api/tasks?gid=1003
+[2025-12-21T22:33:43.274Z] GET /api/users
+[2025-12-21T22:33:46.239Z] GET /api/tasks
+[2025-12-21T22:33:48.035Z] GET /api/groups

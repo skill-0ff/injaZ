@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Outfit Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="brand-logo">
+            <span class="brand-text">inja</span><span class="brand-accent">Z</span>
+        </div>
+
+        <!-- Center Navigation -->
+        <div class="nav-group">
+            <!-- Home -->
+            <button class="nav-btn active" data-section="home" aria-label="Home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+            </button>
+            <!-- Status (Activity/Pulse) -->
+            <button class="nav-btn" data-section="status" aria-label="Status">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+            </button>
+            <!-- Teams (Users) -->
+            <button class="nav-btn" data-section="teams" aria-label="Teams">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+            </button>
+            <!-- Tasks (Check Square) -->
+            <button class="nav-btn" data-section="tasks" aria-label="Tasks">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 11 12 14 22 4"></polyline>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                </svg>
+            </button>
+            <!-- Leaderboard (Award/Trophy) -->
+            <button class="nav-btn" data-section="leaderboard" aria-label="Leaderboard">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="7"></circle>
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+            </button>
+            <!-- Account (User) -->
+            <button class="nav-btn" data-section="account" aria-label="Account">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Right Actions: Language & Logout -->
+        <div class="right-actions" style="display: flex; align-items: center; gap: 1rem;">
+
+
+            <button class="logout-btn" id="logoutBtn" aria-label="Logout">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-content" style="padding-top: 100px; padding-left: 20px; padding-right: 20px;">
+        <!-- Home Section -->
+        <section id="home" class="content-section">
+            <div class="overview-box">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                    <h2 style="margin-bottom: 0;" data-i18n="header_overview">Overview</h2>
+                    <!-- Custom Select Dropdown -->
+                    <div class="custom-select" id="groupFilterDropdown">
+                        <button class="select-trigger">
+                            <span class="selected-text" data-i18n="filter_all_groups">All Groups</span>
+                            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="select-options">
+                            <div class="option" data-value="all" data-i18n="filter_all_groups">All Groups</div>
+                            <div class="option" data-value="group1">Group Alpha</div>
+                            <div class="option" data-value="group2">Group Beta</div>
+                            <div class="option" data-value="group3">Group Gamma</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-value" id="stat-failed">0</span>
+                        <span class="stat-label" data-i18n="stat_failed">Failed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="stat-completed">0</span>
+                        <span class="stat-label" data-i18n="stat_completed">Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="stat-progress">0</span>
+                        <span class="stat-label" data-i18n="stat_in_progress">In-Progress</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="stat-score">0</span>
+                        <span class="stat-label" data-i18n="stat_score">Score</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Box (Teacher View with Filter) -->
+            <div class="team-box">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h2 data-i18n="nav_team">Team Members</h2>
+                    <!-- Custom Select for Team Filter -->
+                    <div class="custom-select" id="teamMemberFilterDropdown" style="width: 150px;">
+                        <button class="select-trigger" style="padding: 0.4rem 1rem; font-size: 0.9rem;">
+                            <span class="selected-text" data-i18n="filter_all_groups">All Groups</span>
+                            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="select-options">
+                            <div class="option" data-value="all" data-i18n="filter_all_groups">All Groups</div>
+                            <!-- Dynamic Options -->
+                        </div>
+                    </div>
+                </div>
+                <div class="member-list" id="memberList">
+                    <!-- Members will be loaded here -->
+                </div>
+            </div>
+
+
+
+            <!-- Tasks Box -->
+            <div class="tasks-box">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h2 style="margin-bottom: 0;">Tasks</h2>
+                    <!-- Custom Select Dropdown for Tasks -->
+                    <div class="custom-select" id="taskGroupFilterDropdown" style="width: 180px;">
+                        <button class="select-trigger">
+                            <span class="selected-text" data-i18n="filter_all_groups">All Groups</span>
+                            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="select-options">
+                            <div class="option" data-value="all" data-i18n="filter_all_groups">All Groups</div>
+                            <div class="option" data-value="group1">Group Alpha</div>
+                            <div class="option" data-value="group2">Group Beta</div>
+                            <div class="option" data-value="group3">Group Gamma</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tasks-table-container">
+                    <table class="tasks-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 30px;"></th> <!-- Criticality -->
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Start</th>
+                                <th>End</th>
+                                <th style="width: 30px;"></th> <!-- Expand Action -->
+                            </tr>
+                        </thead>
+                        <tbody id="tasksList">
+                            <!-- Tasks will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Status Section -->
+        <section id="status" class="content-section hidden">
+            <div class="status-box">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h2 style="margin-bottom: 0;">System Tasks</h2>
+                    <!-- Custom Select Dropdown for Status Page -->
+                    <div class="custom-select" id="statusGroupFilterDropdown" style="width: 180px;">
+                        <button class="select-trigger">
+                            <span class="selected-text" data-i18n="filter_all_groups">All Groups</span>
+                            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="select-options">
+                            <div class="option" data-value="all" data-i18n="filter_all_groups">All Groups</div>
+                            <div class="option" data-value="group1">Group Alpha</div>
+                            <div class="option" data-value="group2">Group Beta</div>
+                            <div class="option" data-value="group3">Group Gamma</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tasks-table-container">
+                    <table class="tasks-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 30px;"></th> <!-- Criticality -->
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                                <th>Start</th>
+                                <th>Time Left</th>
+                                <th style="width: 30px;"></th> <!-- Expand Action -->
+                            </tr>
+                        </thead>
+                        <tbody id="statusPageTasksList">
+                            <!-- Tasks will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teams Section -->
+        <section id="teams" class="content-section hidden">
+            <div class="status-box">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h2 class="ml-30" style="margin-bottom: 0;" data-i18n="header_managed_teams">Managed Teams</h2>
+
+                    <!-- Header Actions -->
+                    <div class="header-actions" style="display: flex; gap: 1rem; align-items: center;">
+                        <!-- Delete Group Button -->
+                        <button class="header-btn btn-danger" id="openDeleteGroupBtn" title="Delete Group"
+                            data-i18n-title="btn_delete_group_title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="3 6 5 6 21 6"></polyline>
+                                <path
+                                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                </path>
+                            </svg>
+                        </button>
+
+                        <!-- Create Group Button -->
+                        <button class="header-btn btn-primary" id="openCreateGroupBtn" title="Create Group"
+                            data-i18n-title="btn_create_group_title" onclick="openCreateGroupModal()">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                                <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                                <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                                <line x1="14" y1="17.5" x2="21" y2="17.5"></line>
+                                <line x1="17.5" y1="14" x2="17.5" y2="21"></line>
+                            </svg>
+                        </button>
+
+                        <!-- Add Member Button -->
+                        <button class="header-btn btn-success" id="openAddMemberBtn" title="Add Member"
+                            data-i18n-title="btn_add_member_title">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <line x1="20" y1="8" x2="20" y2="14"></line>
+                                <line x1="23" y1="11" x2="17" y2="11"></line>
+                            </svg>
+                        </button>
+
+                        <!-- Custom Select Dropdown for Teams -->
+                        <div class="custom-select" id="teamsGroupFilterDropdown" style="width: 180px;">
+                            <button class="select-trigger">
+                                <span class="selected-text" data-i18n="filter_all_groups">All Groups</span>
+                                <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+                            <div class="select-options">
+                                <div class="option selected" data-value="all" data-i18n="filter_all_groups">All Groups
+                                </div>
+                                <!-- Options will be populated dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tasks-table-container">
+                    <table class="tasks-table">
+                        <thead>
+                            <tr>
+                                <th data-i18n="th_fullname">Full Name</th>
+                                <th data-i18n="th_job">Job</th>
+                                <th data-i18n="th_phone">Phone</th>
+                                <th data-i18n="th_email">Email</th>
+                                <th data-i18n="th_role">Role</th>
+                                <th style="width: 80px;" data-i18n="th_action">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="managedUsersList">
+                            <!-- Helper logic will populate this -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tasks Section -->
+        <section id="tasks" class="content-section hidden">
+            <!-- System Tasks Panel -->
+            <div class="status-box">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h2 style="margin-bottom: 0;" data-i18n="header_manage_tasks">Manage Task</h2>
+                    <div style="display: flex; gap: 0.75rem;">
+                        <button class="btn-premium-filter" id="filterTasksBtn" title="Filter Tasks">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                            </svg>
+                        </button>
+                        <button class="btn-premium-add" id="openCreateTaskBtn" title="Add Task">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            <span data-i18n="btn_add_task">Add Task</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="tasks-table-container">
+                    <table class="tasks-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 30px;"></th>
+                                <th data-i18n="th_title">Title</th>
+                                <th data-i18n="th_desc">Description</th>
+                                <th data-i18n="th_by">By</th>
+                                <th data-i18n="th_status">Status</th>
+                                <th data-i18n="th_start">Start</th>
+                                <th data-i18n="th_end">End</th>
+                                <th data-i18n="th_action">Action</th>
+                                <th style="width: 30px;"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="systemTasksList">
+                            <!-- Tasks will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leaderboard Section -->
+        <section id="leaderboard" class="content-section hidden">
+            <div class="status-box">
+                <h2 style="margin-bottom: 1rem;" data-i18n="header_leaderboard">Leaderboard</h2>
+                <div class="tasks-table-container">
+                    <table class="tasks-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 60px;" data-i18n="th_rank">Rank</th>
+                                <th data-i18n="th_group">Group Name</th>
+                                <th data-i18n="th_score">Score</th>
+                                <th data-i18n="th_members">Members</th>
+                                <th data-i18n="th_completed_tasks">Completed Tasks</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboardListTeacher">
+                            <!-- Leaderboard items will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Account Section -->
+        <section id="account" class="content-section hidden">
+            <div style="display: flex; gap: 2rem; max-width: 1000px; margin: 0 auto; flex-wrap: wrap;">
+                <!-- Profile Settings -->
+                <div class="account-box" style="flex: 1; min-width: 300px;">
+                    <h2 style="margin-bottom: 2rem; text-align: center;" data-i18n="modal_account_settings">Account
+                        Settings</h2>
+                    <form id="profileSettingsForm"
+                        style="display: flex; flex-direction: column; gap: 1.5rem; flex: 1; height: 100%;">
+
+                        <div class="form-group">
+                            <label for="profileName" data-i18n="lbl_fullname"
+                                style="display: block; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem; text-align: center;">Full
+                                Name</label>
+                            <input type="text" id="profileName" class="account-input" placeholder="Enter your full name"
+                                data-i18n-placeholder="ph_fullname" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profileEmail" data-i18n="lbl_email"
+                                style="display: block; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem; text-align: center;">Email
+                                Address</label>
+                            <input type="email" id="profileEmail" class="account-input" placeholder="Enter your email"
+                                data-i18n-placeholder="ph_email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="profilePhone" data-i18n="lbl_phone"
+                                style="display: block; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem; text-align: center;">Phone
+                                Number</label>
+                            <input type="tel" id="profilePhone" class="account-input"
+                                placeholder="Enter your phone number" data-i18n-placeholder="ph_phone">
+                        </div>
+
+                        <div style="margin-top: auto;">
+                            <button type="submit" class="btn-primary" id="saveProfileBtn"
+                                style="width: 100%; border-radius: var(--radius-sm);">
+                                <span data-i18n="btn_confirm_changes">Confirm Changes</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Change Password -->
+                <div class="account-box" style="flex: 1; min-width: 300px;">
+                    <h2 style="margin-bottom: 2rem; text-align: center;" data-i18n="modal_change_password">Change
+                        Password</h2>
+                    <form id="changePasswordForm"
+                        style="display: flex; flex-direction: column; gap: 1.5rem; flex: 1; height: 100%;">
+                        <div class="form-group">
+                            <label for="oldPassword" data-i18n="lbl_old_password"
+                                style="display: block; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem; text-align: center;">Old
+                                Password</label>
+                            <div class="input-wrapper">
+                                <input type="password" id="oldPassword" class="account-input"
+                                    placeholder="Current Password" data-i18n-placeholder="ph_old_password" required>
+                                <button type="button" class="toggle-password-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="newPassword" data-i18n="lbl_new_password"
+                                style="display: block; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem; text-align: center;">New
+                                Password</label>
+                            <div class="input-wrapper">
+                                <input type="password" id="newPassword" class="account-input" placeholder="New Password"
+                                    data-i18n-placeholder="ph_new_password" required>
+                                <button type="button" class="toggle-password-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword" data-i18n="lbl_confirm_password"
+                                style="display: block; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem; text-align: center;">Confirm
+                                Password</label>
+                            <div class="input-wrapper">
+                                <input type="password" id="confirmPassword" class="account-input"
+                                    placeholder="Confirm New Password" data-i18n-placeholder="ph_confirm_password"
+                                    required>
+                                <button type="button" class="toggle-password-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary"
+                            style="width: 100%; margin-top: auto; border-radius: var(--radius-sm);"
+                            data-i18n="btn_update_password">Update
+                            Password</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Delete Group Modal -->
+    <div class="modal-overlay" id="deleteGroupModal">
+        <div class="modal-glass">
+            <div class="modal-header">
+                <h2 data-i18n="modal_delete_group">Delete Group</h2>
+                <p data-i18n="modal_delete_group_desc">Select a group to permanently delete.</p>
+            </div>
+
+            <div class="group-selection-list" id="deleteGroupList">
+                <p style="text-align:center; color: #888; padding: 1rem;" data-i18n="msg_no_groups">No groups loaded</p>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-modal btn-cancel" id="closeDeleteGroupBtn" data-i18n="btn_cancel">Cancel</button>
+                <button class="btn-modal btn-confirm-delete" id="confirmDeleteGroupBtn" disabled
+                    data-i18n="btn_confirm_delete">Confirm Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete User Modal -->
+    <div class="modal-overlay" id="deleteUserModal">
+        <div class="modal-glass">
+            <div class="modal-header">
+                <h2 data-i18n="modal_delete_user">Delete User</h2>
+                <p id="deleteUserMessage" data-i18n="modal_delete_user_msg">Are you sure you want to delete this user?
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-modal btn-cancel" id="closeDeleteUserBtn" data-i18n="btn_cancel">Cancel</button>
+                <button class="btn-modal btn-confirm-delete" id="confirmDeleteUserBtn" disabled
+                    data-i18n="btn_confirm_delete">Confirm Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit User Modal -->
+    <div id="editUserModal" class="modal-overlay">
+        <div class="modal-glass">
+            <h2 class="modal-title" data-i18n="modal_edit_member">Edit Member</h2>
+            <p class="modal-description" data-i18n="modal_edit_member_desc">Update member details below.</p>
+
+            <input type="text" id="editMemberName" class="premium-input" placeholder="Full Name"
+                data-i18n-placeholder="ph_fullname">
+            <input type="email" id="editMemberEmail" class="premium-input" placeholder="Email Address"
+                data-i18n-placeholder="ph_email">
+            <input type="text" id="editMemberJob" class="premium-input" placeholder="Job Title"
+                data-i18n-placeholder="ph_job_title">
+
+            <!-- Selections: Group & Role -->
+            <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                <!-- Group Selection -->
+                <div class="custom-select" id="editMemberGroupSelect" style="flex: 2;">
+                    <button class="select-trigger"
+                        style="background: rgba(0,0,0,0.3); color: #fff; border: 1px solid rgba(255,255,255,0.1);">
+                        <span class="selected-text">Select Group</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="select-options">
+                        <!-- Dynamic Options -->
+                    </div>
+                </div>
+
+                <!-- Role Selection -->
+                <div class="custom-select" id="editMemberRoleSelect" style="flex: 1;">
+                    <button class="select-trigger"
+                        style="background: rgba(0,0,0,0.3); color: #fff; border: 1px solid rgba(255,255,255,0.1);">
+                        <span class="selected-text">Normal</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="select-options">
+                        <div class="option" data-value="NORMAL" data-i18n="role_normal">Normal</div>
+                        <div class="option" data-value="LEADER" data-i18n="role_leader">Leader</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-modal btn-cancel" id="closeEditMemberBtn" data-i18n="btn_cancel">Cancel</button>
+                <button class="btn-confirm-create" id="confirmEditMemberBtn" data-i18n="btn_save_changes">Save
+                    Changes</button>
+            </div>
+        </div>
+    </div>
+    <div id="createGroupModal" class="modal-overlay">
+        <div class="modal-glass">
+            <h2 class="modal-title" data-i18n="modal_create_group">Create New Group(s)</h2>
+            <p class="modal-description" data-i18n="modal_create_group_desc">
+                Enter group names below. You can create multiple groups at once by separating them with commas or
+                newlines.
+            </p>
+            <textarea id="newGroupNames" class="premium-textarea" placeholder="e.g. Group Alpha, Group Beta..."
+                data-i18n-placeholder="ph_group_names" rows="5"></textarea>
+            <div class="modal-footer">
+                <button class="btn-modal btn-cancel" id="closeCreateGroupBtn" data-i18n="btn_cancel">Cancel</button>
+                <button class="btn-confirm-create" id="confirmCreateGroupBtn" data-i18n="btn_create_groups">Create
+                    Groups</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Member Modal (Shared Theme) -->
+    <div id="addMemberModal" class="modal-overlay">
+        <div class="modal-glass">
+            <h2 class="modal-title" data-i18n="modal_add_member">Add New Member</h2>
+            <p class="modal-description" data-i18n="modal_add_member_desc">Enter the details of the new member below.
+            </p>
+
+            <input type="text" id="addMemberName" class="premium-input" placeholder="Full Name"
+                data-i18n-placeholder="ph_fullname">
+            <input type="email" id="addMemberEmail" class="premium-input" placeholder="Email Address"
+                data-i18n-placeholder="ph_email">
+            <input type="text" id="addMemberJob" class="premium-input" placeholder="Job Title"
+                data-i18n-placeholder="ph_job_title">
+
+            <!-- Selections: Group & Role -->
+            <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                <!-- Group Selection -->
+                <div class="custom-select" id="addMemberGroupSelect" style="flex: 2;">
+                    <button class="select-trigger"
+                        style="background: rgba(0,0,0,0.3); color: #fff; border: 1px solid rgba(255,255,255,0.1);">
+                        <span class="selected-text" data-i18n="ph_select_group">Select Group</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="select-options">
+                        <div class="option selected" data-value="">Select Group</div>
+                        <!-- Dynamic Options -->
+                    </div>
+                </div>
+
+                <!-- Role Selection -->
+                <div class="custom-select" id="addMemberRoleSelect" style="flex: 1;">
+                    <button class="select-trigger"
+                        style="background: rgba(0,0,0,0.3); color: #fff; border: 1px solid rgba(255,255,255,0.1);">
+                        <span class="selected-text">Normal</span>
+                        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="select-options">
+                        <div class="option selected" data-value="NORMAL" data-i18n="role_normal">Normal</div>
+                        <div class="option" data-value="LEADER" data-i18n="role_leader">Leader</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-modal btn-cancel" id="closeAddMemberBtn" data-i18n="btn_cancel">Cancel</button>
+                <button class="btn-confirm-create" id="confirmAddMemberBtn" data-i18n="btn_add_member">Add
+                    Member</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Advanced Filter Panel -->
+    <div id="filterPanel" class="filter-panel">
+        <div class="filter-header">
+            <h2 data-i18n="modal_filter_title">Filter Tasks</h2>
+            <button id="closeFilterPanel" class="close-btn">&times;</button>
+        </div>
+        <div class="filter-body">
+            <!-- Group Filter -->
+            <div class="filter-section">
+                <h3 data-i18n="filter_groups">Groups</h3>
+                <div class="checkbox-group" id="groupFilterOptions">
+                    <!-- Options populated by JS -->
+                </div>
+            </div>
+
+            <!-- Time Range Filter -->
+            <div class="filter-section">
+                <h3 data-i18n="filter_time">Time Range</h3>
+                <div class="input-group">
+                    <label data-i18n="lbl_start_date">Start Date (From)</label>
+                    <input type="date" id="filterStartDate" class="premium-input">
+                </div>
+                <div class="input-group">
+                    <label data-i18n="lbl_deadline">Deadline (To)</label>
+                    <input type="date" id="filterEndDate" class="premium-input">
+                </div>
+            </div>
+
+            <!-- Criticality Filter -->
+            <div class="filter-section">
+                <h3 data-i18n="filter_criticality">Criticality</h3>
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <input type="checkbox" value="high" name="criticality">
+                        <span class="custom-checkbox"></span>
+                        <span data-i18n="crit_high">High</span>
+                        <span class="critic-dot critic-high" style="margin-left: auto;"></span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" value="med" name="criticality">
+                        <span class="custom-checkbox"></span>
+                        <span data-i18n="crit_med">Medium</span>
+                        <span class="critic-dot critic-med" style="margin-left: auto;"></span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" value="low" name="criticality">
+                        <span class="custom-checkbox"></span>
+                        <span data-i18n="crit_low">Low</span>
+                        <span class="critic-dot critic-low" style="margin-left: auto;"></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Status Filter -->
+            <div class="filter-section">
+                <h3 data-i18n="filter_status">Status</h3>
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <input type="checkbox" value="in-progress" name="status">
+                        <span class="custom-checkbox"></span>
+                        <span data-i18n="status_in_progress">In Progress</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" value="NOT_STARTED" name="status">
+                        <span class="custom-checkbox"></span>
+                        <span data-i18n="status_not_started">Not Started</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" value="failed" name="status">
+                        <span class="custom-checkbox"></span>
+                        <span data-i18n="status_failed">Failed</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" value="completed" name="status">
+                        <span class="custom-checkbox"></span>
+                        <span data-i18n="status_completed">Completed</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="filter-footer">
+            <button id="resetFiltersBtn" class="btn-premium-reset" data-i18n="btn_reset">Reset</button>
+            <button id="applyFiltersBtn" class="btn-primary" data-i18n="btn_filter">Apply Filters</button>
+        </div>
+    </div>
+    <!-- Add Task Modal -->
+    <div id="addTaskModal" class="modal-overlay hidden">
+        <div class="modal custom-modal-center">
+            <div class="modal-header">
+                <h2 data-i18n="modal_add_task">Add New Task</h2>
+                <button id="closeAddTaskModalBtn" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="createTaskForm">
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label data-i18n="lbl_title">Title</label>
+                            <input type="text" id="newTaskTitle" class="premium-input"
+                                placeholder="Title (Alphabets only)" data-i18n-placeholder="ph_title" required>
+                        </div>
+                        <div class="form-group half">
+                            <label data-i18n="lbl_desc">Description</label>
+                            <textarea id="newTaskDesc" class="premium-input" placeholder="Description (Alphabets only)"
+                                data-i18n-placeholder="ph_desc" required
+                                style="height: 48px; padding-top: 12px; resize: none;"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label data-i18n="lbl_criticality">Criticality</label>
+                            <div class="criticality-selector" id="newTaskCriticalitySelector">
+                                <div class="crit-option" data-value="high" data-i18n="crit_high">High</div>
+                                <div class="crit-option" data-value="med" data-i18n="crit_med">Medium</div>
+                                <div class="crit-option" data-value="low" data-i18n="crit_low">Low</div>
+                            </div>
+                            <input type="hidden" id="newTaskCriticalityInput">
+                        </div>
+                        <div class="form-group half">
+                            <label data-i18n="lbl_deadline_simple">Deadline</label>
+                            <input type="datetime-local" id="newTaskDeadline" class="premium-input" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-i18n="lbl_assign_groups">Assign to Groups</label>
+                        <div class="checkbox-group-container premium-input" id="createTaskGroupOptions">
+                            <!-- Populated via JS -->
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" id="cancelCreateTaskBtn" class="btn-cancel"
+                            data-i18n="btn_cancel">Cancel</button>
+                        <button type="submit" class="btn-primary" data-i18n="btn_create_task">Create Task</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Edit Task Modal (Premium) -->
+    <div id="editTaskModal" class="modal-overlay hidden">
+        <div class="modal custom-modal-center glass-panel">
+            <div class="modal-header">
+                <h2 data-i18n="modal_edit_task">Edit Task</h2>
+                <button id="closeEditTaskModalBtn" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="editTaskForm">
+                    <input type="hidden" id="editTaskId">
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label data-i18n="lbl_title">Title</label>
+                            <input type="text" id="editTaskTitle" class="premium-input"
+                                placeholder="Title (Alphabets only)" data-i18n-placeholder="ph_title" required>
+                        </div>
+                        <div class="form-group half">
+                            <label data-i18n="lbl_desc">Description</label>
+                            <textarea id="editTaskDesc" class="premium-input" placeholder="Description (Alphabets only)"
+                                data-i18n-placeholder="ph_desc" required
+                                style="height: 48px; padding-top: 12px; resize: none;"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label data-i18n="lbl_criticality">Criticality</label>
+                            <!-- Custom Select for Criticality -->
+                            <div class="custom-select" id="editTaskCriticalitySelect">
+                                <button type="button" class="select-trigger premium-input"
+                                    style="justify-content: space-between;">
+                                    <span class="selected-text" data-i18n="ph_select_criticality">Select
+                                        Criticality</span>
+                                    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </button>
+                                <div class="select-options">
+                                    <div class="option" data-value="high">
+                                        <span data-i18n="crit_high">High</span> <span class="critic-dot critic-high"
+                                            style="margin-left: auto;"></span>
+                                    </div>
+                                    <div class="option" data-value="med">
+                                        <span data-i18n="crit_med">Medium</span> <span class="critic-dot critic-med"
+                                            style="margin-left: auto;"></span>
+                                    </div>
+                                    <div class="option" data-value="low">
+                                        <span data-i18n="crit_low">Low</span> <span class="critic-dot critic-low"
+                                            style="margin-left: auto;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" id="editTaskCriticalityInput">
+                        </div>
+                        <div class="form-group half">
+                            <label data-i18n="filter_status">Status</label>
+                            <!-- Custom Select for Status -->
+                            <div class="custom-select" id="editTaskStatusSelect">
+                                <button type="button" class="select-trigger premium-input"
+                                    style="justify-content: space-between;">
+                                    <span class="selected-text" data-i18n="ph_select_status">Select Status</span>
+                                    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </button>
+                                <div class="select-options">
+                                    <div class="option" data-value="NOT_STARTED" data-i18n="status_not_started">Not
+                                        Started</div>
+                                    <div class="option" data-value="in-progress" data-i18n="status_in_progress">In
+                                        Progress</div>
+                                    <div class="option" data-value="completed" data-i18n="status_completed">Completed
+                                    </div>
+                                    <div class="option" data-value="failed" data-i18n="status_failed">Failed</div>
+                                </div>
+                            </div>
+                            <input type="hidden" id="editTaskStatusInput">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group" style="width: 100%;">
+                            <label data-i18n="lbl_deadline_simple">Deadline</label>
+                            <input type="datetime-local" id="editTaskDeadline" class="premium-input" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-i18n="lbl_assigned_groups">Assigned Groups</label>
+                        <div class="checkbox-group-container premium-input" id="editTaskGroupOptions">
+                            <!-- Populated via JS -->
+                            <div style="text-align: center; color: #888;" data-i18n="msg_loading_groups">Loading
+                                groups...</div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" id="cancelEditTaskBtn" class="btn-cancel"
+                            data-i18n="btn_cancel">Cancel</button>
+                        <button type="submit" class="btn-primary" id="saveEditTaskBtn" data-i18n="btn_save_changes">Save
+                            Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="deleteTaskModal">
+        <div class="modal glass-panel delete-modal-content">
+            <div class="modal-body centered-body">
+                <div class="delete-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 6h18"></path>
+                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                    </svg>
+                </div>
+                <h2 data-i18n="modal_delete_task">Delete Task?</h2>
+                <p data-i18n="modal_delete_task_msg">Are you sure you want to remove this task? This action is permanent
+                    and cannot be undone.</p>
+                <div class="modal-footer centered-footer">
+                    <button class="btn-cancel" id="cancelDeleteTaskBtn" data-i18n="btn_cancel">Cancel</button>
+                    <button class="btn-danger-glow" id="confirmDeleteTaskBtn" data-i18n="btn_delete_confirm">Yes, Delete
+                        It</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="shader-background.js"></script>
+</body>
+
+</html>
