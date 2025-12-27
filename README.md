@@ -1,4 +1,4 @@
-# 💎 Injaz - Task & Team Management System
+# ✨ Injaz - Task & Team Management System
 
 Injaz is a premium, full-stack task management application designed for teams. It features a modern, **glassmorphism-inspired UI** and a robust role-based backend to manage tasks, groups, and performance metrics effectively.
 
@@ -6,24 +6,24 @@ Injaz is a premium, full-stack task management application designed for teams. I
 
 ## 🚀 Features
 
-### 🔐 Multi-Tier Access Control
-*   **👨‍🏫 Teacher (Admin)**: Full control over users, groups, and tasks.
-*   **🏽 Leader**: Manage assigned group tasks and update statuses.
+### � Multi-Tier Access Control
+*   **� Teacher (Admin)**: Full control over users, groups, and tasks.
+*   **👥 Leader**: Manage assigned group tasks and update statuses.
 *   **👤 Cell (Member)**: View assigned tasks and personal/group stats.
 
-### 📋 Comprehensive Task Management
+### � Comprehensive Task Management
 *   Full lifecycle management: `Not Started`, `In Progress`, `Completed`, `Failed`.
 *   Custom criticality levels for prioritization.
 
-### 📈 Team Performance tracking
+### � Team Performance Tracking
 *   Automatic scoring systems.
 *   Real-time stat tracking for groups and individuals.
 
-### 🛡️ Security First
+### 🛡 Security First
 *   **🔑 JWT-based Authentication**: Secure session management.
 *   **🚦 Anti-Brute Force**: Login rate limiting and IP blocking.
 *   **🔒 Salted Hashing**: Secure password storage via Bcrypt.
-*   **🧼 Clean Data**: Rigorous input validation and sanitization.
+*   **� Clean Data**: Rigorous input validation and sanitization.
 
 ### 🎨 Modern UI/UX
 *   **💎 Premium Glassmorphism**: High-end design aesthetic.
@@ -32,7 +32,7 @@ Injaz is a premium, full-stack task management application designed for teams. I
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
@@ -45,12 +45,12 @@ Injaz is a premium, full-stack task management application designed for teams. I
 
 ## 📋 Prerequisites
 
-*   **Node.js** 🟢 (v14 or higher recommended)
-*   **npm** 📦 (Node Package Manager)
+*   **Node.js** (v14 or higher recommended)
+*   **npm** (Node Package Manager)
 
 ---
 
-## ⚡ Installation & Setup
+## ⚙️ Installation & Setup
 
 Follow these steps to get the project running locally.
 
@@ -84,7 +84,7 @@ npm start
 
 ### 5️⃣ Access the Application
 Open your browser and navigate to:
-🔗 [http://localhost:3000](http://localhost:3000)
+🔗 [https://localhost:3000](https://localhost:3000)
 
 #### 🔑 Admin Credentials
 | Role | Email | Password |
@@ -93,17 +93,17 @@ Open your browser and navigate to:
 
 ---
 
-## 📂 Project Structure
+## � Project Structure
 
 ```text
 injaZ2.0/
-├── 📂 backend/           # Node.js Express Server
+├── � backend/           # Node.js Express Server
 │   ├── 🗄️ database/      # SQLite database engine
-│   ├── 🔐 certs/         # SSL Certificates
+│   ├── � certs/         # SSL Certificates
 │   ├── 🚀 server.js      # Main Entry Point
 │   ├── 📦 package.json   # Dependencies
 │   └── ⚙️ .env           # Configuration
-└── 📂 frontend/          # Client-side Assets
+└── � frontend/          # Client-side Assets
     ├── 📄 index.html     # Login Page
     ├── 📄 teacher.html   # Admin Dashboard
     ├── 📄 leader.html    # Leader Dashboard
@@ -114,7 +114,7 @@ injaZ2.0/
 
 ---
 
-## 🛡️ Security Notes
+## 🛡 Security Notes
 
 *   **HTTPS**: The application uses a self-signed certificate configuration in `server.js`. For production, ensure valid certificates are used.
 *   **User Onboarding**: New users created by the Admin are assigned a default password (`password123`). It is **highly recommended** that users change their password immediately upon their first login.
